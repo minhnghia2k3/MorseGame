@@ -68,7 +68,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background: url('./background.jpg');
+    background: url('./src/background.jpg');
     background-size: cover;
     /* background- */
     background-repeat: no-repeat;
@@ -176,7 +176,7 @@ body {
 }
 
 .popup-form form {
-    background: url('./popup-background.jpg');
+    background: url('./src/popup-background.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
