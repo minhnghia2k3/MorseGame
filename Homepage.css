@@ -141,6 +141,8 @@ body {
     background-color: #fff;
     color: black;
     font-family: var(--font);
+    cursor: pointer;
+
 
 }
 
@@ -156,8 +158,9 @@ body {
     background-color: transparent;
     border: none;
     outline: none;
-    cursor: pointer;
     font-family: var(--font);
+    cursor: pointer;
+
 
 }
 
