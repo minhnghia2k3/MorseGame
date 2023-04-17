@@ -181,11 +181,9 @@ function handleUserState(userState) {
 
             element.innerHTML = `<form><ul>
             <h2>Thể lệ</h2>
-            <li>Trò chơi nhóm (dơ tay để dành quyền trả lời)</li>
-            <li>Mỗi nhóm sẽ chọn ngẫu nhiên 1 trong 10 câu hỏi</li>
-            <li>Nhóm trả lời đúng sẽ dành được số điểm tương ứng</li>
-            <li>Sau 10 câu hỏi, nhóm chiến thắng với số điểm cao nhất
-                sẽ dành được một phần thưởng.</li>
+            <li>Trò chơi giải mã Morse thành một ca dao / tục ngữ</li>
+            <li>Mỗi cá nhân sẽ dơ tay dành quyền trả lời câu hỏi</li>
+            <li>Cá nhân trả lời đúng sẽ nhận được một phần thưởng</li>
             </ul>
             </form>
         
@@ -198,12 +196,12 @@ function handleUserState(userState) {
             var element = $('.popup-form');
             element.id = 'popupFormMembers';
             element.innerHTML = `<form><ul>
-            <h2>Đội ngũ sáng tạo</h2>
-            <li>Lê Minh Nghĩa - </li>
-            <li>Trần Minh Quang - </li>
-            <li>Nguyễn Vũ Thành Long - </li>
-            <li>Trần Triệu Vĩ - </li>
-            <li>Đỗ Việt Hùng - </li>
+            <h2>Nhóm 9</h2>
+            <li>Nguyễn Vũ Thành Long - 1721030453</li>
+            <li>Đỗ Việt Hùng - 1721030493</li>
+            <li>Trần Minh Quang - 1721030398</li>
+            <li>Lê Minh Nghĩa - 1721031512</li>
+            <li>Trần Triệu Vĩ - 172100070</li>
             </ul>
             </form>`
             showPopup('.members-button');

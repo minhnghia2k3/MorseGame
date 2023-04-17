@@ -234,7 +234,7 @@ body {
 /* CSS popupFormRules */
 #popupFormRules li {
     display: revert;
-    font-size: 22px;
+    font-size: 25px;
     font-family: var(--font);
     margin: 0 40px;
 }
