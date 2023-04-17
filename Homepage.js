@@ -3,7 +3,7 @@ const $$ = document.querySelectorAll.bind(document);
 
 function start() {
     var userState = '';
-    homeBtnHandle(userState);
+    homeBtnHandle();
     handleUserState(userState);
 }
 start();
@@ -35,20 +35,20 @@ function showAnswer() {
 }
 
 // Khởi tạo userState rỗng
-function homeBtnHandle(userState) {
+function homeBtnHandle() {
     var homeBtn = document.querySelectorAll('.rules-button, .play-button, .members-button');
     for (var i = 0; i < homeBtn.length; i++) {
-        homeBtn[i].onclick = (event) => {
-            var btnClass = event.target.className;
-            if (btnClass === 'rules-button') {
-                userState = 'rules';
-            } else if (btnClass === 'play-button') {
-                userState = 'play';
-            } else if (btnClass === 'members-button') {
-                userState = 'members';
+        homeBtn[i].addEventListener('click', function () {
+            // Thực hiện thay đổi giá trị của userState dựa trên lớp của phần tử được nhấn
+            if (this.classList.contains('play-button')) {
+                userState = "play";
+            } else if (this.classList.contains('members-button')) {
+                userState = "members";
+            } else if (this.classList.contains('rules-button')) {
+                userState = "rules";
             }
             handleUserState(userState);
-        }
+        })
     }
 }
 
@@ -152,8 +152,7 @@ function handleUserState(userState) {
     switch (userState) {
         case 'play': {
             var element = $('.popup-form');
-            element.setAttribute('id', 'popupFormPlay');
-            // element.id = 'popupFormPlay'
+            element.id = 'popupFormPlay';
             // Render HTML
             element.innerHTML = `
             <form>
@@ -178,7 +177,8 @@ function handleUserState(userState) {
 
         case 'rules': {
             var element = $('.popup-form');
-            element.id = 'popupFormRules'
+            element.id = 'popupFormRules';
+
             element.innerHTML = `<form><ul>
             <h2>Thể lệ</h2>
             <li>Trò chơi nhóm (dơ tay để dành quyền trả lời)</li>

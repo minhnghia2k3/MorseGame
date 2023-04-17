@@ -141,6 +141,7 @@ body {
     background-color: #fff;
     color: black;
     font-family: var(--font);
+    font-size: 35px;
     cursor: pointer;
 }
 
