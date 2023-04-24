@@ -181,9 +181,9 @@ function handleUserState(userState) {
 
             element.innerHTML = `<form><ul>
             <h2>Thể lệ</h2>
-            <li>Trò chơi giải mã Morse thành một ca dao / tục ngữ</li>
-            <li>Mỗi cá nhân sẽ dơ tay dành quyền trả lời câu hỏi</li>
-            <li>Cá nhân trả lời đúng sẽ nhận được một phần thưởng</li>
+            <li>Người chơi sẽ dịch đoạn mã morse bất kì thành một câu thơ, câu ca giao tục ngữ</li>
+            <li>Người chơi sẽ giơ tay để dành quyền trả lời câu hỏi  hỏi</li>
+            <li>Khi trả lời đúng người sẽ dành được những  phần quà tương ứng với số sao có trong câu hỏi đó</li>
             </ul>
             </form>
         
@@ -468,7 +468,3 @@ function handleUserState(userState) {
         }
     }
 }
-
-
-
-
