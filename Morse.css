@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap');
+
+:root {
+    --background-color: rgb(200, 174, 142);
+    --font: 'Delicious Handrawn', cursive;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font);
+    user-select: none;
+}
+
+.content p {
+    user-select: all !important;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    background: url('./src/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.9;
+
+    min-height: 454px;
+    height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4vw;
+    padding-top: 40px;
+    text-shadow: 4px 5px 1px #fff;
+    position: relative;
+}
+
+
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+    flex: 0.7;
+}
+
+main .playBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 150px;
+    height: 150px;
+    background-color: #fff;
+    border: 5px solid black;
+    color: black;
+    border-radius: 40%;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+}
+
+footer .ruleBtn,
+.memberBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 50px;
+    border-radius: 5px;
+    border: 2px solid black;
+    background-color: #fff;
+    color: black;
+    font-size: 3vw;
+    cursor: pointer;
+}
+
+.playBtn:hover,
+.ruleBtn:hover,
+.memberBtn:hover {
+    background-color: var(--background-color);
+    color: #fff;
+}
+
+/* *** CSS form *** */
+.form {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.form-show {
+    display: block;
+    animation: fadeIn 0.2s ease-in-out;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opcaity: 1
+    }
+}
+
+.form ul {
+    background: url('./src/popup-background.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    margin: 10% auto;
+    padding: 20px;
+    border: 10px solid black;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+.form h2 {
+    text-align: center;
+    font-size: 55px;
+    text-shadow: 5px 3px 1px white;
+    margin: 10px;
+}
+
+.form li {
+    margin: 0 20px;
+    font-size: 25px;
+}
+
+/* *** Questions *** */
+.questions-content {
+    display: Flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-top: 20px;
+}
+
+.questions-button,
+.btnTranslate {
+    background-color: black;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    opacity: 1;
+}
+
+.questions-button:hover {
+    opacity: 0.8;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 30px;
+    text-shadow: 4px 5px 1px #fff;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    font-size: 40px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.btnTranslate {
+    font-family: var(--font);
+    width: 20%;
+    height: 50px;
+    cursor: pointer;
+    font-size: 25px;
+}

@@ -1,0 +1,43 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/52a3a20b53.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./Morse.css">
+    <title>Trò chơi giải mã Morse - Nhóm 5</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>CA DAO CÙNG MÃ MORSE</h1>
+        </header>
+        <main>
+            <div class="playBtn" onclick="app.handleState('play')">
+                <i class="fa-solid fa-play"></i>
+            </div>
+        </main>
+        <footer>
+
+            <div class="ruleBtn" onclick="app.handleState('rule')">
+                <p>Luât chơi</p>
+            </div>
+            <div class="ruleBtn">
+                <p>Dịch mã</p>
+            </div>
+            <div class="memberBtn" onclick="app.handleState('member')">
+                <p>Thành viên nhóm</p>
+            </div>
+        </footer>
+
+        <!-- JS handle popup -->
+        <div class="form">
+
+        </div>
+    </div>
+    <script src="./Morse.js"></script>
+</body>
+
+</html>
