@@ -8,12 +8,8 @@ const formElement = $('.form');
 
 
 
+
 const app = {
-    init() {
-        this.handleState();
-    },
-
-
     showForm() {
         formElement.classList.add('form-show')
     },
@@ -77,6 +73,18 @@ const app = {
         Y: "-.--",
         Z: "--..",
         " ": "/"
+    },
+
+    handleTranslator: () => {
+        const plainText = $('#plain-text');
+        const morseCode = $('#morse-code');
+
+        plainText.addEventListener('input', () => {
+            morseCode.value = app.toMorseCode(plainText.value)
+        })
+        morseCode.addEventListener('input', () => {
+            plainText.value = app.fromMorseCode(morseCode.value)
+        })
     },
 
     toMorseCode: (text) => {
@@ -231,6 +239,26 @@ const app = {
                 <li>Khi trả lời đúng người sẽ dành được những  phần quà tương ứng với số sao có trong câu hỏi đó</li>
                 </ul>
                 `)
+                break;
+
+            case 'translator':
+                this.render(`
+                <ul>
+                <h2>Trình dịch mã morse</h2>
+                <div class="wrapper">
+                    <div class="left">
+                        <label>Plain text</label>
+                        <textarea id="plain-text" rows="10" cols="50"></textarea>
+                    </div>
+                    <div class="right">
+                        <label>Morse code</label>
+                        <textarea id="morse-code" rows="10" cols="50"></textarea>
+                    </div>
+                </div>
+                
+                </ul>
+                `)
+                this.handleTranslator();
                 break;
             case 'member':
                 this.render(`
@@ -477,5 +505,3 @@ const app = {
         }
     }
 }
-
-app.init();

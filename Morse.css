@@ -76,7 +76,8 @@ footer {
 }
 
 footer .ruleBtn,
-.memberBtn {
+.memberBtn,
+.translatorBtn {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -92,7 +93,8 @@ footer .ruleBtn,
 
 .playBtn:hover,
 .ruleBtn:hover,
-.memberBtn:hover {
+.memberBtn:hover,
+.translatorBtn:hover {
     background-color: var(--background-color);
     color: #fff;
 }
@@ -150,6 +152,49 @@ footer .ruleBtn,
     font-size: 25px;
 }
 
+/* *** Form Translator *** */
+.form .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 20px;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.form .wrapper .left,
+.right {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+label {
+    font-size: 26px;
+    margin-bottom: 5px;
+}
+
+textarea {
+    font-size: .875rem;
+    width: 95%;
+    height: 8rem;
+    padding: 8px;
+    border-radius: .5rem;
+    border: 2px solid #ccc;
+    outline: none;
+    background-color: #fff;
+    color: #333;
+    text-align: left;
+    line-height: 2;
+    transition: border-color 0.2s ease-in-out;
+}
+
+textarea:hover,
+textarea:focus {
+    border-color: black;
+}
+
 /* *** Questions *** */
 .questions-content {
     display: Flex;
@@ -158,6 +203,8 @@ footer .ruleBtn,
     gap: 5px;
     margin-top: 20px;
 }
+
+
 
 .questions-button,
 .btnTranslate {
