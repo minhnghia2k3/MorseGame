@@ -89,16 +89,20 @@ const app = {
 
     toMorseCode: (text) => {
         const upperCaseText = text.toUpperCase();
+        // Split từng character trong string thành array
+        // Dùng map để chuyển đổi từng character thành morse code
         return upperCaseText.split('').map((char) => {
             return app.morseCode[char] || '';
         }).join(' ');
     },
     fromMorseCode: (code) => {
+        // Tạo object mới với key và value đảo ngược với object app.morseCode
         const reverseMorseCode = Object.entries(app.morseCode).reduce((acc, [key, value]) => {
             acc[value] = key;
             return acc;
         }, {});
 
+        // Trả về string
         return code.split(' ').map((sequence) => {
             return reverseMorseCode[sequence] || '';
         }).join('');
